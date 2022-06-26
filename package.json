@@ -1,0 +1,16 @@
+{
+  "name": "cypressclassv10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress open": "npx cypress open",
+    "e2e:test": "cypress run --spec cypress/e2e/**/**.cy.js --headed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.1.0"
+  }
+}
