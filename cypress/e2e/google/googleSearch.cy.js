@@ -1,9 +1,6 @@
 import locators from "/cypress/locators/google.js";
 import googleSearchData from '/cypress/fixtures/googleSearchData.json'
 
-// dynamic test data
-// github 
-// reports 
 //#integer number= 1212321  #String = "hhfhfghf"  #boolean= true/false  boolean isgoogleagoodsite = true # array = ["", "",""] # object {"",""}
 describe('google search', {baseUrl: 'https://www.google.com/'},  () => {
     beforeEach(() => {  
@@ -14,13 +11,13 @@ describe('google search', {baseUrl: 'https://www.google.com/'},  () => {
            const inputData = googleSearchData[searchData];
         cy.visit('/');
         cy.get(locators.searchBox).type(inputData+"{enter}")//.click()
-        // make sure the new url conatins what we searching for 
+        // make sure the new url conatins what we are searching for 
         if (inputData.includes(" ")){ 
-          var URLSearchedDate = inputData.split(' ').join('+');
+          var URLSearchedData = inputData.split(' ').join('+');
         }else {
-          var URLSearchedDate = inputData; 
+          var URLSearchedData = inputData; 
         }
-        cy.url().should('include', `search?q=${URLSearchedDate}`)
+        cy.url().should('include', `search?q=${URLSearchedData}`)
         // make sure that result bar exist
         cy.get(locators.resultBar).should('be.visible')
         // make sure that we can see 'all' in the result bar

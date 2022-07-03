@@ -1,5 +1,4 @@
 
-       const {resolve} = require('path');
 describe('Login', () => {
     beforeEach(() => {
         // vist amazon site

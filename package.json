@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress open": "npx cypress open",
-    "e2e:test": "cypress run --spec cypress/e2e/**/**.cy.js --headed"
+    "e2e:test": "cypress run --spec cypress/e2e/**/**.cy.js --headed",
+    "e2e:google:test": "cypress run --spec cypress/e2e/google/**.cy.js --headed"
   },
   "author": "",
   "license": "ISC",
