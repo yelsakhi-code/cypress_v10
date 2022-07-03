@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress open": "npx cypress open",
     "e2e:test": "cypress run --spec cypress/e2e/**/**.cy.js --headed",
+    "e2e:amazon:test": "cypress run --spec cypress/e2e/amazon/**.cy.js",
     "e2e:google:test": "cypress run --spec cypress/e2e/google/**.cy.js --headed"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "10.1.0"
+    "cypress": "10.1.0",
+    "cypress-mochawesome-reporter": "^3.2.0"
   }
 }
