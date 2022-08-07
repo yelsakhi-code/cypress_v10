@@ -10,7 +10,7 @@ describe('Login', () => {
   
     it('login with wrong username', () => {
       cy.get(locators.searchBox).type(testData.product1)
-      
+        //just to test
       // click login
       // enter wrong user name
       // enter dommy password
