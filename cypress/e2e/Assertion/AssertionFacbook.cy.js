@@ -1,10 +1,9 @@
 
-describe('Home Tests',  {baseUrl: 'https://www.google.com/'},  () => {​​​​​​ 
- //  beforeEach(() => {​​​​​​      
-        cy.visit('https://practice.automationbro.com/');    }​​​​​​)    
-   ///
-   it("Open The home page and verify the urk and the title", () => {​​​​​​ 
-          cy.visit('/');
+describe('Home Tests', () => {​​​​​​ 
+  //beforeEach(() => {​​​​​​      
+      // cy.visit('https://practice.automationbro.com/'); 
+   it("Open The home page and verify the url and the title", () => {​​​​​​ 
+          //cy.visit('/');
 
         cy.visit('https://practice.automationbro.com/');  
 
@@ -15,8 +14,6 @@ describe('Home Tests',  {baseUrl: 'https://www.google.com/'},  () => {​​​
         cy.title().should("eq", "Parctice E-Commerce site - Automation Bro")    
  }​​​​​​); 
 
- ///
- 
  it(' Clicks the get Started buttonand asserts the url', () =>{
 
     cy.get("#get-started").click();
@@ -36,5 +33,7 @@ describe('Home Tests',  {baseUrl: 'https://www.google.com/'},  () => {​​​
     cy.get("#primary-menu").find("li").first().should("have.text", "home");
 
   
- }​​​​​​)
+  }​​​​​​)
+}​​​​​​)
+
 
