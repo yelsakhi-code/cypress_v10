@@ -9,6 +9,7 @@ module.exports = defineConfig({
       return require('./cypress/plugins/index.js')(on, config)
     },
     baseUrl: 'https://www.amazon.com/',
+    chromeWebSecurity: false,
     retries: 2,
     videoCompression: false,
     screenshotsFolder: "cypress/reports/screenshots",

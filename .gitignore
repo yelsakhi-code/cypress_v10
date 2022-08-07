@@ -1,5 +1,5 @@
 # dependencies
 node_modules
 debug
-/cypress/screenshots
-/cypress/videos
+cypress/reports
+cypress/videos
