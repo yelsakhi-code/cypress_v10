@@ -1,34 +1,33 @@
 
-//describe('Home Tests', () => {​​​​​​ 
-describe('intecept', {baseUrl: 'https://practice.automationbro.com/'},  () => {
-  beforeEach(() => {  
-       cy.visit('/');
-  }) 
- //it('Open The home page and verify the url and the title', () => {​​​​​​
- //cy.visit('https://practice.automationbro.com/');
- it('Open The home page and verify the url and the title', () => {
- cy.url().should("include", "automationbro");
 
- cy.title().should("eq", "Parctice E-Commerce site - Automation Bro");
-}​​​​​​)
-  
- it(' Clicks the get Started buttonand asserts the url', () =>{
+describe('intercept with youtube practice',{baseUrl: 'https://practice.automationbro.com/'},()=>{
 
-      cy.get("#get-started").click()
-
-        cy.url().should("include", "#get-started")
-
- })
-  ///
-  it(' Get the text of the heading and assert the value', () =>{
-    cy.get("H1.elementor-heading-title").should("have.text", "Think diferent. Make different")
-
+//Open Cypress set ".only"
+beforeEach(() => {
+    cy.visit('/')
   })
+it('Test api with simple intercept',()=>{
+  cy.url().should("include", "automationbro");
+  cy.title().should("eq", "Parctice E-Commerce site - Automation Bro");
+})
 
-  it('verifies the text of the first menu link item', () =>{
+//Open cypress set ".only"
 
-    cy.get("#primary-menu").find("li").first().should("have.text", "home");
-  }​​​​​​)
-}​​​​​​)
+it('Clicks the get Started buttonand asserts the url', ()=>{
+  cy.get("#get-started").click()
+
+  cy.url().should("include", "#get-started")
+
+})
+
+it('verifies the text of the first menu link item', () =>{
+  cy.get("H1.elementor-heading-title").should("have.text", "Think diferent. Make different")
+
+})
+
+
+
+})
+
 
 
