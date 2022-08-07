@@ -10,7 +10,6 @@ describe('Login', () => {
   
     it('login with wrong username', () => {
       cy.get(locators.searchBox).type(testData.product1)
-      cy.visit('https://practice.automationbro.com/')  
       
       // click login
       // enter wrong user name
